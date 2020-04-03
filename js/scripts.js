@@ -1,0 +1,1 @@
+"use strict";var name='"Генератор защитного поля"',price=1e3,input=prompt("'Выбран ".concat(name,", цена за штуку ").concat(price," кредитов'"));input=Number(input),alert("'Выбран ".concat(name,", цена за штуку ").concat(input+price," кредитов'"));
