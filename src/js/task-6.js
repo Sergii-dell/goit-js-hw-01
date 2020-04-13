@@ -9,6 +9,7 @@ do {
   if (ordered === null) {
     message = 'Введите сумму.';
     alert(`Общяя сумма чисел равна ${total}`); //  вывод  символов
+    break;
   } else {
     ordered = Number(ordered); //  приобразование в числ
     if (ordered <= 0 || Number.isNaN(ordered)) {
@@ -18,4 +19,4 @@ do {
       message = 'Введите сумму.';
     }
   }
-} while (1 < 20);
+} while (true);
