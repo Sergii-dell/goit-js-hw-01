@@ -1,24 +1,28 @@
 'use strict' /* использование последней  версии  js  */;
 
 const total = 100;
-let message;
+const message1 = 'Досвидания'; // проверка  на  отказ
+const message2 = 'Некоректный ввод.';
+const message3 = 'Заказ оформлен, с вами свяжетса менеджер.';
+const message4 = 'На складе недостаточно товаров !';
+
 let ordered = prompt(`"Введите количество едениц в заказе."`); //  ввод  символов
 if (ordered === null) {
-  message = 'Досвидания'; // проверка  на  отказ
+  alert(message1); // проверка  на  отказ
 } else {
   ordered = Number(ordered); //  приобразование в числ
   if (ordered <= 0) {
-    message = 'Некоректный ввод.';
+    alert(message2);
   } else {
     if (Number.isNaN(ordered)) {
-      message = 'Некоректный ввод.';
+      alert(message2);
     } else {
       if (ordered <= total) {
-        message = 'Заказ оформлен, с вами свяжетса менеджер.';
+        alert(message3);
       } else {
-        message = 'На складе недостаточно товаров !';
+        alert(message4);
       }
     }
   }
 }
-alert(message); //  вывод  символов
+

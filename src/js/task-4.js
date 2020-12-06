@@ -3,27 +3,29 @@
 const credits = 23580;
 const pricePerDroid = 3000;
 
-let message;
+const message1 = 'Досвидания !';
+const message2 = 'Некоректный ввод.';
+const message3 = 'Недостаточно средств на счету !';
 
 let ordered = prompt(`"Введите количество дроидов для покупки."`); //  ввод  символов
+let total =  credits - pricePerDroid * ordered;
+
 if (ordered === null) {
-  message = 'Досвидания !'; // проверка  на  отказ
+  alert(message1); //  вывод  символов
 } else {
   ordered = Number(ordered); //  приобразование в числ
   if (ordered <= 0) {
-    message = 'Некоректный ввод.';
+    alert(message2);
   } else {
     if (Number.isNaN(ordered)) {
-      message = 'Некоректный ввод.';
+      alert(message2);
     } else {
       if (pricePerDroid * ordered <= credits) {
-        message = `"Вы купили ${ordered} дроидов, на счету осталось ${
-          credits - pricePerDroid * ordered
-        } кредитов."`;
+        alert(`"Вы купили ${ordered} дроидов, на счету осталось ${total} кредитов."`);
       } else {
-        message = 'Недостаточно средств на счету !';
+        alert(message3);
       }
     }
   }
 }
-alert(message); //  вывод  символов
+

@@ -6,17 +6,11 @@ let ordered;
 
 do {
   ordered = prompt(message); //  ввод  символов
-  if (ordered === null) {
-    message = 'Введите сумму.';
-    alert(`Общяя сумма чисел равна ${total}`); //  вывод  символов
-    break;
+  if (isNaN(ordered)){
+    alert('не число');
   } else {
-    ordered = Number(ordered); //  приобразование в числ
-    if (ordered <= 0 || Number.isNaN(ordered)) {
-      message = 'Было введенно не число, попробуйте ище раз.';
-    } else {
-      total = total + ordered;
-      message = 'Введите сумму.';
-    }
+   total += Number(ordered);
   }
-} while (true);
+  } while(ordered !== null);
+
+  alert(`сумма ${total}`);

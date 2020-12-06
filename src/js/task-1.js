@@ -1,10 +1,10 @@
 'use strict' /* использование последней  версии  js  */;
 
 const name = `"Генератор защитного поля"`;
-const price = 1000;
+let price = 1000;
 
-let input = prompt(`'Выбран ${name}, цена за штуку ${price} кредитов'`);
+alert(`'Выбран ${name}, цена за штуку ${price} кредитов'`);
 
-input = Number(input);
+price = 2000;
 
-alert(`'Выбран ${name}, цена за штуку ${input + price} кредитов'`);
+alert(`'Выбран ${name}, цена за штуку ${price} кредитов'`);
